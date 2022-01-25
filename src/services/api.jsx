@@ -5,11 +5,9 @@ export async function getPokemon(query, order, page, selectedType) {
   param.set('direction', order);
   param.set('page', page);
 
-  if (selectedType !== 'all') {
-    param.set('type', selectedType);
-  }
-
-  const response = await fetch(`https://pokedex-alchemy.herokuapp.com/api/pokedex`);
+  const response = await fetch(
+    `https://pokedex-alchemy.herokuapp.com/api/pokedex?${param.toString()}`
+  );
   const data = await response.json();
   console.log(data);
 
