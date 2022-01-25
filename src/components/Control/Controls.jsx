@@ -1,6 +1,6 @@
 import React from 'react';
 
-export default function Control({ query, setQuery, order, setOrder, setLoading }) {
+export default function Control({ query, setQuery, setLoading }) {
   return (
     <div>
       <input
