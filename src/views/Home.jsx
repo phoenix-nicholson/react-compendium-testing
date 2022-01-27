@@ -18,6 +18,7 @@ export default function Home() {
       fetchData();
     }
   }, [query, loading]);
+  if (loading) return <h1>Loading...</h1>;
   return (
     <div>
       <h1>Pokedex</h1>
